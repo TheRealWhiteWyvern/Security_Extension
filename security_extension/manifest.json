@@ -1,0 +1,19 @@
+{
+  "name": "LaTeX Dark Mode",
+  "description": "Customisable dark mode for LaTeX editors",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "security.html",
+    "default_icon": "security.webp"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/dark.js"],
+      "matches": [
+        "*://*.overleaf.com/*"
+      ],
+      "css": ["styles/dark.css"]
+    }
+  ]
+}
