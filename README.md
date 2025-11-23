@@ -1,2 +1,2 @@
-# Security_Extension
-Web extension to check the security against the current website.
+# Security Extension
+Security extension for checking if you are secured against your website

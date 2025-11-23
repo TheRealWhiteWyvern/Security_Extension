@@ -1,17 +1,19 @@
 {
-  "name": "LaTeX Dark Mode",
-  "description": "Customisable dark mode for LaTeX editors",
+  "name": "Security Extension",
+  "description": "Extension to assess website security features.",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["cookies", "activeTab"],
+  "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "security.html",
-    "default_icon": "security.webp"
+    "default_popup": "security.html"
   },
   "content_scripts": [
     {
-      "js": ["scripts/dark.js"],
+      "js": ["scripts/cookie_detector.js"],
       "matches": [
-        "*://*.overleaf.com/*"
+        "http://*/*",
+        "https://*/*"
       ],
       "css": ["styles/dark.css"]
     }
